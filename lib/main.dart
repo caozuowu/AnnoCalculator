@@ -1,3 +1,6 @@
+import 'dart:ffi';
+
+import 'package:anno/model/Resident.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:excel/excel.dart';
@@ -37,25 +40,35 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _counter++;
 
-    var file = "data.xlsx";
-    var bytes = File(file).readAsBytesSync();
-    var excel = Excel.decodeBytes(bytes);
-    print(excel.tables["resident"]?.rows);
-    
-    // for (var table in excel.tables.keys) {
-    //   print(table); //sheet Name
-    //   print(excel.tables[table].maxCols);
-    //   print(excel.tables[table].maxRows);
-    //   for (var row in excel.tables[table].rows) {
-    //     print("$row");
-    //   }
-    // }
+      var file = "assets/data.xlsx";
+      var bytes = File(file).readAsBytesSync();
+      var excel = Excel.decodeBytes(bytes);
+      var sheet = excel.tables["resident"];
+      // var resident = Resident("famar", 0, [], "");
+      // print(resident.type);
+      // print(resident.capacity);
+      // print(resident.consume);
+      // print(resident.image);
+      // print(sheet?.dict());
+      // var rows = excel.tables["resident"]?.rows;
+
+      // for (var row in excel.tables["resident"]?.rows ?? []) {
+      //   print(row);
+      // }
+
+      // for (var table in excel.tables.keys) {
+      //   print(table); //sheet Name
+      //   print(excel.tables[table].maxCols);
+      //   print(excel.tables[table].maxRows);
+      //   for (var row in excel.tables[table].rows) {
+      //     print("$row");
+      //   }
+      // }
     });
   }
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
