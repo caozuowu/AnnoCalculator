@@ -6,6 +6,9 @@ class Resident {
   List<String>? consume;
   String? image;
 
+  String get imagePath =>
+      "assets/image/resident" + (image ?? "icon_resident_farmer.png");
+
   Resident({this.name, this.capacity, this.consume, this.image});
 
   Resident.fromJson(Map<String, dynamic> json) {
