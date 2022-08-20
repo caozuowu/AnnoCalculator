@@ -1,6 +1,6 @@
-import 'dart:ffi';
-
 import 'package:excel/excel.dart';
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 
 class TableHeader {
@@ -14,47 +14,24 @@ class TableHeader {
   }
 
   dynamic converValue(dynamic value) {
+    var str = value != null ? value.toString() : "";
     switch (type) {
       case "string":
-        return value.toString();
+        return str;
       case "int":
-        return int.parse(value);
+        return int.parse(str);
       case "double":
-        return double.parse(value);
+        return double.parse(str);
       case "string_array":
-        return value.toString().split(",");
+        return str.split(",");
       default:
-        return value.toString();
+        return str;
     }
   }
 }
 
-extension Void on dynamic {
-  dynamic _converBy(TableHeader header) {
-    switch (header.type) {
-      case "string":
-        return toString();
-      case "int":
-        return int.parse(this);
-      case "double":
-        return double.parse(this);
-      case "string_array":
-        return toString().split(",");
-      default:
-        return toString();
-    }
-  }
-}
-
-extension Viod on Sheet {
-  List<Map<String, dynamic>> mapList() {
-    List<Map<String, dynamic>> result = [];
-    var length = rows.indexWhere((row) => row[0] == null);
-
-    if (length <= 1) {
-      return result;
-    }
-
+extension ObjectConver on Sheet {
+  List<TableHeader?> _headerKeys() {
     List<TableHeader?> keys = [];
     for (var i = 0; i < rows[0].length; i++) {
       var cell = rows[0][i];
@@ -63,21 +40,36 @@ extension Viod on Sheet {
           : TableHeader(cell.value.toString());
       keys.add(header);
     }
+    return keys;
+  }
+
+  List<Map<String, dynamic>> toObjectList() {
+    List<Map<String, dynamic>> result = [];
+
+    var length = rows.lastIndexWhere((row) => row[0] != null);
+
+    if (length <= 1) {
+      return result;
+    }
+
+    var headerKeys = _headerKeys();
 
     for (var i = 1; i < length; i++) {
       var row = rows[i];
-      Map dic = {};
+      Map<String, dynamic> rowObject = {};
+
       for (var j = 0; j < row.length; j++) {
-        if (keys[j] != null) {
-          var type = keys[j];
-          // row[j]._converBy(keys[j]);
-          // type.type;
+        var key = headerKeys[j];
+        if (key != null) {
+          key.converValue(row[j]?.value);
+          var value = key.converValue(row[j]?.value);
+          //print(value);
+          rowObject[key.name] = value;
         }
       }
-      //   result.add(dic);
+      result.add(rowObject);
     }
 
-    //print(result);
     return result;
   }
 }

@@ -1,9 +1,9 @@
-import 'dart:ffi';
-
+import 'dart:convert';
 import 'package:anno/model/Resident.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:excel/excel.dart';
+import './extensions/SheetExtension.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,26 +44,10 @@ class _MyHomePageState extends State<MyHomePage> {
       var bytes = File(file).readAsBytesSync();
       var excel = Excel.decodeBytes(bytes);
       var sheet = excel.tables["resident"];
-      // var resident = Resident("famar", 0, [], "");
-      // print(resident.type);
-      // print(resident.capacity);
-      // print(resident.consume);
-      // print(resident.image);
-      // print(sheet?.dict());
-      // var rows = excel.tables["resident"]?.rows;
-
-      // for (var row in excel.tables["resident"]?.rows ?? []) {
-      //   print(row);
-      // }
-
-      // for (var table in excel.tables.keys) {
-      //   print(table); //sheet Name
-      //   print(excel.tables[table].maxCols);
-      //   print(excel.tables[table].maxRows);
-      //   for (var row in excel.tables[table].rows) {
-      //     print("$row");
-      //   }
-      // }
+      sheet?.toObjectList().forEach((object) {
+        var resident = Resident.fromJson(object);
+        print(resident.consume);
+      });
     });
   }
 
