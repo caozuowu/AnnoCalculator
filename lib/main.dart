@@ -39,16 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
   void _incrementCounter() {
     setState(() {
       _counter++;
-
-      var file = "assets/data.xlsx";
-      var bytes = File(file).readAsBytesSync();
-      var excel = Excel.decodeBytes(bytes);
-      var sheet = excel.tables["resident"];
-      sheet?.toObjectList().forEach((object) {
-        var resident = Resident.fromJson(object);
-        print(resident.consume);
-      });
     });
+
   }
 
   @override
