@@ -1,29 +1,45 @@
-import 'package:flutter/material.dart';
-
 class Resident {
-  String? name;
-  int? capacity;
-  List<String>? consume;
-  String? image;
+	String? key;
+	int? capacity;
+	String? image;
+	String? area;
+	String? display;
+	Consume? consume;
 
-  String get imagePath =>
-      "assets/image/resident" + (image ?? "icon_resident_farmer.png");
+	Resident({this.key, this.capacity, this.image, this.area, this.display, this.consume});
 
-  Resident({this.name, this.capacity, this.consume, this.image});
+	Resident.fromJson(Map<String, dynamic> json) {
+		key = json['key'];
+		capacity = json['capacity'];
+		image = json['image'];
+		area = json['area'];
+		display = json['display'];
+		consume = json['consume'] != null ? new Consume.fromJson(json['consume']) : null;
+	}
 
-  Resident.fromJson(Map<String, dynamic> json) {
-    name = json['name'];
-    capacity = json['capacity'];
-    consume = json['consume'].cast<String>();
-    image = json['image'];
-  }
+	Map<String, dynamic> toJson() {
+		final Map<String, dynamic> data = new Map<String, dynamic>();
+		data['key'] = this.key;
+		data['capacity'] = this.capacity;
+		data['image'] = this.image;
+		data['area'] = this.area;
+		data['display'] = this.display;
+		if (this.consume != null) {
+      data['consume'] = this.consume!.toJson();
+    }
+		return data;
+	}
+}
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['name'] = name;
-    data['capacity'] = capacity;
-    data['consume'] = consume;
-    data['image'] = image;
-    return data;
-  }
+class Consume {
+
+	Consume();
+
+	Consume.fromJson(Map<String, dynamic> json) {
+	}
+
+	Map<String, dynamic> toJson() {
+		final Map<String, dynamic> data = new Map<String, dynamic>();
+		return data;
+	}
 }
