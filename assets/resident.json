@@ -1,0 +1,205 @@
+[
+  {
+    "key": "农民",
+    "capacity": 10,
+    "image": "icon_resident_farmer.png",
+    "area": "old_world",
+    "display": "farmer",
+    "consume": {
+      "鱼": 0.0025,
+      "烈酒": 0.0033,
+      "工作服": 0.0031
+    }
+  },
+  {
+    "key": "工人",
+    "capacity": 20,
+    "image": "icon_resident_worker.png",
+    "area": "old_world",
+    "display": "worker",
+    "consume": {
+      "鱼": 0.0025,
+      "烈酒": 0.0033,
+      "工作服": 0.0031,
+      "香肠": 0.001,
+      "面包": 0.0009,
+      "肥皂": 0.0004,
+      "啤酒": 0.008
+    }
+  },
+  {
+    "key": "工匠",
+    "capacity": 30,
+    "image": "icon_resident_artisan.png",
+    "area": "old_world",
+    "display": "artisan",
+    "consume": {
+      "香肠": 0.0013,
+      "面包": 0.0012,
+      "肥皂": 0.006,
+      "啤酒": 0.001,
+      "罐头": 0.0003,
+      "缝纫机": 0.001,
+      "毛皮大衣": 0.0009,
+      "朗姆酒": 0.0019
+    }
+  },
+  {
+    "key": "工程师",
+    "capacity": 40,
+    "image": "icon_resident_engineer.png",
+    "area": "old_world",
+    "display": "engineer",
+    "consume": {
+      "罐头": 0.0005,
+      "缝纫机": 0.0014,
+      "毛皮大衣": 0.0013,
+      "眼镜": 0.0002,
+      "自行车": 0.0006,
+      "怀表": 0.002,
+      "灯泡": 0.0003,
+      "朗姆酒": 0.0029,
+      "咖啡": 0.0012,
+      "口香糖": 0.0001,
+      "打字机": 0.0002,
+      "小提琴": 0.0001
+    }
+  },
+  {
+    "key": "投资者",
+    "capacity": 50,
+    "image": "icon_resident_investor.png",
+    "area": "old_world",
+    "display": "investor"
+  },
+  {
+    "key": "学者",
+    "capacity": 120,
+    "image": "icon_resident_scholars.png",
+    "area": "old_world",
+    "display": "scholar",
+    "consume": {
+      "罐头": 0.0005,
+      "留声机": 0.0003,
+      "朗姆酒": 0.0004,
+      "礼帽": 0.0004,
+      "木槿茶": 0.0009,
+      "地毯": 0.0006,
+      "海鲜炖汤": 0.0008,
+      "烟斗": 0.0004,
+      "皮靴": 0.001,
+      "定制服装": 0.0014,
+      "电话": 0.0008
+    }
+  },
+  {
+    "key": "游客",
+    "capacity": 500,
+    "image": "icon_resident_tourist.png",
+    "area": "old_world",
+    "display": "tourists",
+    "consume": {
+      "面包": 0.001,
+      "毛皮大衣": 0.002,
+      "珠宝": 0.002,
+      "果酱": 0.002,
+      "洗发水": 0.001,
+      "柠檬汽水": 0.002,
+      "纪念品": 0.004
+    }
+  },
+  {
+    "key": "农工",
+    "capacity": 20,
+    "image": "icon_resident_jornalero.png",
+    "area": "new_world",
+    "display": "agricultural workers",
+    "consume": {
+      "炸香蕉": 0.0029,
+      "朗姆酒": 0.0014,
+      "斗篷": 0.0025,
+      "烈酒": 0.0017,
+      "辣椒酱": 0.0013
+    }
+  },
+  {
+    "key": "劳工",
+    "capacity": 10,
+    "image": "icon_resident_obrera.png",
+    "area": "new_world",
+    "display": "labor",
+    "consume": {
+      "炸香蕉": 0.0029,
+      "朗姆酒": 0.0014,
+      "斗篷": 0.0025,
+      "墨西哥卷饼": 0.0014,
+      "咖啡": 0.0006,
+      "礼帽": 0.0013,
+      "雪茄": 0.006,
+      "啤酒": 0.0013,
+      "玉米糊": 0.0014,
+      "辣椒酱": 0.0007
+    }
+  },
+  {
+    "key": "探险家",
+    "capacity": 20,
+    "image": "icon_residenta_explorer.png",
+    "area": "arctic",
+    "display": "explorer",
+    "consume": {
+      "烈酒": 0.0015,
+      "硬肉干": 0.0012,
+      "睡袋": 0.0009,
+      "油灯": 0.0006
+    }
+  },
+  {
+    "key": "技师",
+    "capacity": 20,
+    "image": "icon_resident_technician.png",
+    "area": "arctic",
+    "display": "technician",
+    "consume": {
+      "烈酒": 0.0015,
+      "罐头": 0.0006,
+      "咖啡": 0.0012,
+      "硬肉干": 0.0012,
+      "睡袋": 0.0009,
+      "油灯": 0.0006,
+      "熊皮大衣": 0.0012,
+      "雪橇": 0.0009
+    }
+  },
+  {
+    "key": "牧羊人",
+    "capacity": 10,
+    "image": "icon_resident_sheperd.png",
+    "area": "africa",
+    "display": "shepherd",
+    "consume": {
+      "山羊奶": 0.003,
+      "华丽衣服": 0.0015,
+      "木槿茶": 0.0012
+    }
+  },
+  {
+    "key": "长老",
+    "capacity": 20,
+    "image": "icon_resident_elder.png",
+    "area": "africa",
+    "display": "elder",
+    "consume": {
+      "山羊奶": 0.003,
+      "华丽衣服": 0.0015,
+      "木槿茶": 0.0012,
+      "陶罐": 0.0012,
+      "挂毯": 0.0012,
+      "海鲜炖汤": 0.0011,
+      "烟斗": 0.0005,
+      "经文": 0.0005,
+      "灯笼": 0.0009,
+      "眼镜": 0.0004
+    }
+  }
+]
