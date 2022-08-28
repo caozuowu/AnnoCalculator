@@ -1,15 +1,26 @@
-import 'package:anno/model/Resident.dart';
+// @dart=2.9
 import 'package:anno/pages/ResidentPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+// void main() => runApp(new MyApp());
+
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return new ResidentPage();
+    return MaterialApp(
+      title: 'Startup Name Generator',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primaryColor: Colors.white,
+      ),
+      home: const Scaffold(body: ResidentPage()),
+    );
   }
 }
 // class MyApp extends StatelessWidget {

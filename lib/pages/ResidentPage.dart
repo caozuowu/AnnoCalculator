@@ -1,8 +1,36 @@
+// ignore: file_names
 import 'dart:convert';
 
 import 'package:anno/model/Resident.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+class ResidentView extends StatelessWidget {
+  Resident data;
+  ResidentView(this.data, {super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+        width: 168,
+        // height: 72,
+        decoration: const BoxDecoration(
+            color: Color.fromARGB(255, 255, 255, 255),
+            borderRadius: BorderRadius.all(Radius.circular(12))),
+        child: Row(
+          children: [
+            Image.asset(
+              data.path,
+              width: 42,
+              height: 42,
+            ),
+            const Flexible(
+              child: TextField(),
+            )
+          ],
+        ));
+  }
+}
 
 class ResidentPage extends StatefulWidget {
   const ResidentPage({super.key});
@@ -11,42 +39,78 @@ class ResidentPage extends StatefulWidget {
 }
 
 class _ResidentPage extends State<ResidentPage> {
-  List<Resident> _list = [];
+  late TextEditingController _controller;
+
+  List<Resident> _residentList = [];
   @override
   void initState() {
     super.initState();
+    _controller = TextEditingController();
     _loadResource();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
   }
 
   void _loadResource() async {
     var jstring = await rootBundle.loadString("assets/resident.json");
     var data = jsonDecode(jstring);
+    var list = <Resident>[];
     for (var instance in data) {
-      _list.add(Resident.fromJson(instance));
+      list.add(Resident.fromJson(instance));
     }
-    //print(_list);
+    setState(() {
+      _residentList = list;
+    });
+  }
+
+  Widget _buildLeftList() {
+    return ScrollConfiguration(
+        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+        child: ListView.builder(
+          itemCount: _residentList.length,
+          padding: const EdgeInsets.all(16.0),
+          itemBuilder: (context, i) {
+            return ResidentView(_residentList[i]);
+          },
+        ));
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: const BoxDecoration(color: Colors.white),
-        child: Column(children: <Widget>[
-          Expanded(
-            flex: 2,
-            child: Column(),
-          ),
-          Container(
+        decoration: const BoxDecoration(color: Color.fromARGB(255, 84, 84, 84)),
+        child: Column(
+          children: [
+            Container(
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(255, 35, 114, 225)),
               height: 128,
-              // width: 100,
-              decoration: const BoxDecoration(
-                  color: Colors.red,
-                  border: Border(
-                    top: BorderSide(width: 10.0, color: Color(0xFFFFFFFF)),
-                    left: BorderSide(width: 10.0, color: Color(0xFFFFFFFF)),
-                    right: BorderSide(width: 10.0, color: Color(0xFF000000)),
-                    bottom: BorderSide(width: 10.0, color: Color(0xFF000000)),
-                  )))
-        ]));
+            ),
+            Expanded(
+              flex: 2,
+              child: Row(
+                children: [
+                  Container(
+                    // decoration: const BoxDecoration(
+                    //     color: Color.fromARGB(107, 225, 219, 35)),
+                    width: 168,
+                    child: _buildLeftList(),
+                  ),
+                  Expanded(
+                    flex: 2,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          color: Color.fromARGB(255, 225, 127, 35)),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
+        ));
   }
 }

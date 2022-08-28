@@ -1,3 +1,4 @@
+// ignore: file_names
 class Product {
   String? key;
   int? time;
@@ -27,14 +28,14 @@ class Product {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['key'] = this.key;
-    data['time'] = this.time;
-    data['image'] = this.image;
-    data['name'] = this.name;
-    data['base'] = this.base;
-    data['ect'] = this.ect;
-    data['material'] = this.material;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['key'] = key;
+    data['time'] = time;
+    data['image'] = image;
+    data['name'] = name;
+    data['base'] = base;
+    data['ect'] = ect;
+    data['material'] = material;
     return data;
   }
 }

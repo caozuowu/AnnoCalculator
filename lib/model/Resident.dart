@@ -1,45 +1,47 @@
+// ignore: file_names
 class Resident {
-	String? key;
-	int? capacity;
-	String? image;
-	String? area;
-	String? display;
-	Consume? consume;
+  String? key;
+  int? capacity;
+  String? image;
+  String? area;
+  String? display;
+  Consume? consume;
 
-	Resident({this.key, this.capacity, this.image, this.area, this.display, this.consume});
+  String get path => "assets/image/resident/$image";
 
-	Resident.fromJson(Map<String, dynamic> json) {
-		key = json['key'];
-		capacity = json['capacity'];
-		image = json['image'];
-		area = json['area'];
-		display = json['display'];
-		consume = json['consume'] != null ? new Consume.fromJson(json['consume']) : null;
-	}
+  Resident({key, capacity, image, area, display, consume});
 
-	Map<String, dynamic> toJson() {
-		final Map<String, dynamic> data = new Map<String, dynamic>();
-		data['key'] = this.key;
-		data['capacity'] = this.capacity;
-		data['image'] = this.image;
-		data['area'] = this.area;
-		data['display'] = this.display;
-		if (this.consume != null) {
-      data['consume'] = this.consume!.toJson();
+  Resident.fromJson(Map<String, dynamic> json) {
+    key = json['key'];
+    capacity = json['capacity'];
+    image = json['image'];
+    area = json['area'];
+    display = json['display'];
+    consume =
+        json['consume'] != null ? Consume.fromJson(json['consume']) : null;
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['key'] = key;
+    data['capacity'] = capacity;
+    data['image'] = image;
+    data['area'] = area;
+    data['display'] = display;
+    if (consume != null) {
+      data['consume'] = consume!.toJson();
     }
-		return data;
-	}
+    return data;
+  }
 }
 
 class Consume {
+  Consume();
 
-	Consume();
+  Consume.fromJson(Map<String, dynamic> json) {}
 
-	Consume.fromJson(Map<String, dynamic> json) {
-	}
-
-	Map<String, dynamic> toJson() {
-		final Map<String, dynamic> data = new Map<String, dynamic>();
-		return data;
-	}
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    return data;
+  }
 }
