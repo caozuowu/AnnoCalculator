@@ -13,8 +13,7 @@ class ConsumeMap {
       var component = ConsumeMap._create();
       component._map = {};
       for (var name in ["old_world", "new_world", "arctic", "africa"]) {
-        var jstring =
-            await rootBundle.loadString("assets/image/resident/$name.json");
+        var jstring = await rootBundle.loadString("assets/$name.json");
         var data = jsonDecode(jstring);
         component._map[name] = Consume.fromJson(data);
       }
@@ -30,29 +29,27 @@ class ConsumeMap {
 
 class Consume {
   //resident
-  List<String>? rowIndex = [];
+  List<String> rowIndex = [];
   //product
-  List<String>? columeIndex = [];
-  List<List<double>>? data = [];
+  List<String> columeIndex = [];
+  List<List<dynamic>> data = [];
 
-  Consume({this.rowIndex, this.columeIndex, this.data});
+  Consume();
 
   Consume.fromJson(Map<String, dynamic> json) {
-    rowIndex = json['rowIndex'] ?? [];
-    columeIndex = json['columeIndex'] ?? [];
-    data = json['data'] ?? [];
+    rowIndex = List<String>.from(json['rowIndex']);
+    columeIndex = List<String>.from(json['columeIndex']);
+    data = json['data'];
   }
 
   Map<String, double> forResident(String resident) {
     var result = <String, double>{};
-    var r = rowIndex?.indexOf(resident);
-    if (r != null) {
-      for (var c = 0; c < (columeIndex?.length ?? 0); c++) {
-        var name = columeIndex?[c];
-        var value = data?[r][c];
-        if (value != 0 && value != null && name != null) {
-          result[name] = value;
-        }
+    var r = rowIndex.indexOf(resident);
+    for (var c = 0; c < (columeIndex.length); c++) {
+      var name = columeIndex[c];
+      var value = data[r][c];
+      if (value != 0 && value != null) {
+        result[name] = value;
       }
     }
     return result;
@@ -60,25 +57,20 @@ class Consume {
 
   Map<String, double> forProduct(String product) {
     var result = <String, double>{};
-    var c = columeIndex?.indexOf(product);
-    if (c != null) {
-      for (var r = 0; r < (data?.length ?? 0); r++) {
-        var name = rowIndex?[r];
-        var value = data?[r][c];
-        if (value != null && value != 0 && name != null) {
-          result[name] = value;
-        }
+    var c = columeIndex.indexOf(product);
+    for (var r = 0; r < data.length; r++) {
+      var name = rowIndex[r];
+      var value = data[r][c];
+      if (value != null && value != 0) {
+        result[name] = value;
       }
     }
     return result;
   }
 
   double forResidentAndProduct(String resident, String product) {
-    var r = rowIndex?.indexOf(resident);
-    var c = columeIndex?.indexOf(product);
-    if (c != null && r != null) {
-      return data?[c][r] ?? 0;
-    }
-    return 0;
+    var r = rowIndex.indexOf(resident);
+    var c = columeIndex.indexOf(product);
+    return data[c][r];
   }
 }

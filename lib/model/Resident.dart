@@ -1,5 +1,5 @@
 // ignore: file_names
-import 'package:anno/model/consume.dart';
+import 'package:anno/model/Consume.dart';
 
 class Resident {
   String? key;
