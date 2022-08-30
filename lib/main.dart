@@ -1,8 +1,7 @@
 // @dart=2.9
 
-import 'package:anno/pages/ResidentPage.dart';
+import 'package:anno/pages/MainPage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -10,16 +9,27 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key key}) : super(key: key);
+  Future<String> mockNetworkData() async {
+    return Future.delayed(const Duration(seconds: 2), () => "我是从互联网上获取的数据");
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Startup Name Generator',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: const Scaffold(body: ResidentPage()),
-    );
+        title: 'Startup Name Generator',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primaryColor: Colors.green,
+        ),
+        home: FutureBuilder(
+          future: mockNetworkData(),
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.done) {
+              return const Scaffold(body: MainPage());
+            } else {
+              return const Scaffold(body: MainPage());
+            }
+          },
+        ));
   }
 }

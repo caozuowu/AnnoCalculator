@@ -5,6 +5,7 @@ import 'package:anno/model/Resident.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// ignore: must_be_immutable
 class ResidentView extends StatelessWidget {
   Resident data;
   ResidentView(this.data, {super.key});
