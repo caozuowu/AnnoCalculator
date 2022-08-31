@@ -8,6 +8,8 @@ class Product {
   bool? ect;
   List<String>? material;
 
+  String get path => "assets/image/product/$image";
+
   Product(
       {this.key,
       this.time,

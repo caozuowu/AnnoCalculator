@@ -7,7 +7,12 @@ class Resident {
   String? image;
   String? area;
   String? display;
+  List<String> necessity = [];
+  List<String> luxary = [];
+  List<String> skyscraper = [];
   String get path => "assets/image/resident/$image";
+
+  int amount = 0;
 
   Resident({key, capacity, image, area, display});
 
@@ -17,15 +22,8 @@ class Resident {
     image = json['image'];
     area = json['area'];
     display = json['display'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['key'] = key;
-    data['capacity'] = capacity;
-    data['image'] = image;
-    data['area'] = area;
-    data['display'] = display;
-    return data;
+    necessity = List<String>.from(json['necessity'] ?? []);
+    luxary =  List<String>.from(json['luxary'] ?? []);
+    skyscraper = List<String>.from(json['skyscraper'] ?? []);
   }
 }

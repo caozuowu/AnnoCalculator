@@ -1,38 +1,13 @@
 // ignore: file_names
-import 'dart:convert';
-
+import 'package:anno/model/JsonData.dart';
 import 'package:anno/model/Resident.dart';
+import 'package:anno/views/ProductItemView.dart';
+import 'package:anno/views/ResidentView.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
+import '../model/Product.dart';
 
 // ignore: must_be_immutable
-class ResidentView extends StatelessWidget {
-  Resident data;
-  ResidentView(this.data, {super.key});
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-        margin: const EdgeInsets.fromLTRB(0, 10, 0, 10),
-        width: 168,
-        // height: 72,
-        decoration: const BoxDecoration(
-            color: Color.fromARGB(255, 255, 255, 255),
-            borderRadius: BorderRadius.all(Radius.circular(12))),
-        child: Row(
-          children: [
-            Image.asset(
-              data.path,
-              width: 42,
-              height: 42,
-            ),
-            const Flexible(
-              child: TextField(),
-            )
-          ],
-        ));
-  }
-}
-
 class ResidentPage extends StatefulWidget {
   const ResidentPage({super.key});
   @override
@@ -43,6 +18,8 @@ class _ResidentPage extends State<ResidentPage> {
   late TextEditingController _controller;
 
   List<Resident> _residentList = [];
+  List<Product> _productList = [];
+
   @override
   void initState() {
     super.initState();
@@ -56,40 +33,78 @@ class _ResidentPage extends State<ResidentPage> {
     super.dispose();
   }
 
-  void _loadResource() async {
-    var jstring = await rootBundle.loadString("assets/resident.json");
-    var data = jsonDecode(jstring);
+  void _loadResource() {
+    var jsonData = JsonData.shareInstance();
+    var data = jsonData.get("assets/resident.json");
     var list = <Resident>[];
-    for (var instance in data) {
-      list.add(Resident.fromJson(instance));
+    for (var row in data) {
+      list.add(Resident.fromJson(row));
     }
     setState(() {
       _residentList = list;
     });
   }
 
+  void _reloadProduct() {
+    var productKeys = [];
+    Map<String, Product> productMap = {};
+    for (var resident in _residentList) {
+      if (resident.amount > 0) {
+        productKeys += resident.necessity + resident.luxary + resident.skyscraper;
+      }
+    }
+    for (var key in productKeys) {
+      if (!productMap.containsKey(key)) {
+        productMap[key] = Product.fromJson(JsonData.shareInstance().get("assets/product.json")[key]);
+      }
+      // to du calcural
+    }
+    setState(() {
+      _productList = productMap.values.toList();
+    });
+
+  }
+
   Widget _buildLeftList() {
     return ScrollConfiguration(
-        behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
-        child: ListView.builder(
-          itemCount: _residentList.length,
-          padding: const EdgeInsets.all(16.0),
-          itemBuilder: (context, i) {
-            return ResidentView(_residentList[i]);
-          },
-        ));
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView.builder(
+        itemCount: _residentList.length,
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: (context, i) {
+          return ResidentView(_residentList[i], onSubmitted: (value) {
+            // reload product 
+            // print("reload product");
+            _reloadProduct();
+          });
+        }
+      )
+    );
+  }
+
+  Widget _buildRightList() {
+    return ScrollConfiguration(
+      behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+      child: ListView.builder(
+        itemCount: _productList.length,
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: (context, i) {
+          return ProductItemView(_productList[i]);
+        }
+      )
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: const BoxDecoration(color: Color.fromARGB(255, 84, 84, 84)),
+        decoration: const BoxDecoration(color: Color.fromARGB(104, 89, 89, 89)),
         child: Column(
           children: [
             Container(
               decoration:
                   const BoxDecoration(color: Color.fromARGB(255, 35, 114, 225)),
-              height: 128,
+              height: 136,
             ),
             Expanded(
               flex: 2,
@@ -98,15 +113,12 @@ class _ResidentPage extends State<ResidentPage> {
                   Container(
                     // decoration: const BoxDecoration(
                     //     color: Color.fromARGB(107, 225, 219, 35)),
-                    width: 168,
+                    width: 128,
                     child: _buildLeftList(),
                   ),
                   Expanded(
                     flex: 2,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                          color: Color.fromARGB(255, 225, 127, 35)),
-                    ),
+                    child: _buildRightList(),
                   )
                 ],
               ),

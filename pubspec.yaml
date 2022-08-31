@@ -29,6 +29,7 @@ environment:
 dependencies:
   excel: ^2.0.0-null-safety-3
   english_words: ^3.1.0
+  keyboard_actions: "^3.4.7"
   flutter:
     sdk: flutter
 
@@ -63,6 +64,7 @@ flutter:
   assets:
     - assets/
     - assets/image/resident/
+    - assets/image/product/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

@@ -7,12 +7,20 @@ const workbook = XLSX.readFile(xlsxPath)
 
 function generateResidentJson() {
     var sheet = XLSX.utils.sheet_to_json(workbook.Sheets["resident"]);
+    for (const row of sheet) {
+        row.necessity = row.necessity.split(",")
+        row.luxary = row.luxary.split(",")
+        if (row.skyscraper) {
+            row.skyscraper = row.skyscraper.split(",")
+        }
+    }
     var jstring = JSON.stringify(sheet, null, 2);
-    FS.writeFileSync(outputPath + "/" + 'resident.json', jstring);
+    FS.writeFileSync(outputPath + '/resident.json', jstring);
 }
 
 function generateProductJson() {
     var sheet = XLSX.utils.sheet_to_json(workbook.Sheets["product"]);
+    var result = {};
     for (var row of sheet) {
         var material = []
         for (let key of Object.keys(row)) {
@@ -22,45 +30,45 @@ function generateProductJson() {
             }
         }
         row["material"] = material
+        result[row.key] = row;
     }
     // console.log(sheet)
-    var jstring = JSON.stringify(sheet, null, 2);
-    FS.writeFileSync(outputPath + "/" + 'product.json', jstring);
+    var jstring = JSON.stringify(result, null, 2);
+    FS.writeFileSync(outputPath + '/product.json', jstring);
 }
   
 function generateConsumeJson() {
-    var areasName = ["old_world","new_world","arctic","africa"];
-    for (let name of areasName) {
-        var sheet = XLSX.utils.sheet_to_json(workbook.Sheets[name])
+
+    var sheet = XLSX.utils.sheet_to_json(workbook.Sheets["consume"])
         
-        var rowIndex = [];
-        for (var r in sheet) {
-            var row = sheet[r]
-            rowIndex.push(row["resident"])
-            delete row["resident"]
-        }
-
-        var columeIndex = [];
-        var keys = Object.keys(sheet[0])
-        for (var key of keys) {
-            columeIndex.push(key)
-        }
-
-        var data = [];
-        for (var r in sheet) {
-            let values = Object.values(sheet[r])
-            data.push(values)
-        }
-        // console.log(data)
-       
-        var jstring = JSON.stringify({
-            "rowIndex": rowIndex,
-            "columeIndex": columeIndex,
-            "data": data
-        }, null, 2);
-        FS.writeFileSync(outputPath + "/" + name + '.json', jstring);
-
+    var rowIndex = [];
+    for (var r in sheet) {
+        var row = sheet[r]
+        rowIndex.push(row["resident"])
+        delete row["resident"]
     }
+
+    var columeIndex = [];
+    var keys = Object.keys(sheet[0])
+    for (var key of keys) {
+        columeIndex.push(key)
+    }
+
+    var data = [];
+    for (var r in sheet) {
+        let values = Object.values(sheet[r])
+        data.push(values)
+    }
+    // console.log(data)
+   
+    var jstring = JSON.stringify({
+        "rowIndex": rowIndex,
+        "columeIndex": columeIndex,
+        "data": data
+    }, null, 2);
+    FS.writeFileSync(outputPath + '/consume.json', jstring);
+
+      
 }
 (function (){
     generateResidentJson()

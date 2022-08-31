@@ -4,90 +4,287 @@
     "capacity": 10,
     "image": "icon_resident_farmer.png",
     "area": "old_world",
-    "display": "farmer"
+    "display": "farmer",
+    "necessity": [
+      "鱼",
+      "工作服"
+    ],
+    "luxary": [
+      "烈酒"
+    ]
   },
   {
     "key": "工人",
     "capacity": 20,
     "image": "icon_resident_worker.png",
     "area": "old_world",
-    "display": "worker"
+    "display": "worker",
+    "necessity": [
+      "鱼",
+      "工作服",
+      "香肠",
+      "面包",
+      "肥皂"
+    ],
+    "luxary": [
+      "烈酒",
+      "啤酒"
+    ]
   },
   {
     "key": "工匠",
     "capacity": 30,
     "image": "icon_resident_artisan.png",
     "area": "old_world",
-    "display": "artisan"
+    "display": "artisan",
+    "necessity": [
+      "香肠",
+      "面包",
+      "肥皂",
+      "罐头",
+      "缝纫机",
+      "毛皮大衣"
+    ],
+    "luxary": [
+      "啤酒",
+      "朗姆酒"
+    ]
   },
   {
     "key": "工程师",
     "capacity": 40,
     "image": "icon_resident_engineer.png",
     "area": "old_world",
-    "display": "engineer"
+    "display": "engineer",
+    "necessity": [
+      "罐头",
+      "缝纫机",
+      "毛皮大衣",
+      "眼镜",
+      "灯泡",
+      "咖啡"
+    ],
+    "luxary": [
+      "朗姆酒",
+      "自行车",
+      "怀表"
+    ],
+    "skyscraper": [
+      "口香糖",
+      "打字机",
+      "小提琴"
+    ]
   },
   {
     "key": "投资者",
     "capacity": 50,
     "image": "icon_resident_investor.png",
     "area": "old_world",
-    "display": "investor"
+    "display": "investor",
+    "necessity": [
+      "眼镜",
+      "灯泡",
+      "咖啡",
+      "香槟",
+      "汽车",
+      "雪茄",
+      "巧克力"
+    ],
+    "luxary": [
+      "自行车",
+      "怀表",
+      "珠宝",
+      "留声机"
+    ],
+    "skyscraper": [
+      "口香糖",
+      "打字机",
+      "小提琴",
+      "饼干",
+      "白兰地",
+      "台球桌",
+      "玩具"
+    ]
   },
   {
     "key": "学者",
     "capacity": 120,
     "image": "icon_resident_scholars.png",
     "area": "old_world",
-    "display": "scholar"
+    "display": "scholar",
+    "necessity": [
+      "罐头",
+      "朗姆酒",
+      "海鲜炖汤",
+      "定制服装",
+      "电话"
+    ],
+    "luxary": [
+      "木槿茶",
+      "挂毯",
+      "留声机",
+      "烟斗",
+      "礼帽",
+      "皮靴"
+    ]
   },
   {
     "key": "游客",
     "capacity": 500,
     "image": "icon_resident_tourist.png",
     "area": "old_world",
-    "display": "tourists"
+    "display": "tourists",
+    "necessity": [
+      "面包",
+      "毛皮大衣",
+      "果酱",
+      "洗发水",
+      "柠檬汽水"
+    ],
+    "luxary": [
+      "纪念品",
+      "珠宝"
+    ]
   },
   {
     "key": "农工",
-    "capacity": 20,
+    "capacity": 10,
     "image": "icon_resident_jornalero.png",
     "area": "new_world",
-    "display": "agricultural workers"
+    "display": "agricultural workers",
+    "necessity": [
+      "炸香蕉",
+      "斗篷"
+    ],
+    "luxary": [
+      "朗姆酒"
+    ]
   },
   {
     "key": "劳工",
-    "capacity": 10,
+    "capacity": 20,
     "image": "icon_resident_obrera.png",
     "area": "new_world",
-    "display": "labor"
+    "display": "labor",
+    "necessity": [
+      "炸香蕉",
+      "斗篷",
+      "墨西哥卷饼",
+      "咖啡",
+      "礼帽"
+    ],
+    "luxary": [
+      "朗姆酒",
+      "雪茄",
+      "啤酒"
+    ]
+  },
+  {
+    "key": "庄园农工",
+    "capacity": 20,
+    "image": "icon_resident_jornalero.png",
+    "area": "new_world",
+    "display": "agricultural workers",
+    "necessity": [
+      "炸香蕉",
+      "斗篷",
+      "辣椒酱"
+    ],
+    "luxary": [
+      "朗姆酒",
+      "烈酒"
+    ]
+  },
+  {
+    "key": "庄园劳工",
+    "capacity": 40,
+    "image": "icon_resident_obrera.png",
+    "area": "new_world",
+    "display": "labor",
+    "necessity": [
+      "炸香蕉",
+      "斗篷",
+      "墨西哥卷饼",
+      "咖啡",
+      "礼帽",
+      "辣椒酱",
+      "玉米糊"
+    ],
+    "luxary": [
+      "朗姆酒",
+      "雪茄",
+      "啤酒"
+    ]
   },
   {
     "key": "探险家",
     "capacity": 20,
     "image": "icon_residenta_explorer.png",
     "area": "arctic",
-    "display": "explorer"
+    "display": "explorer",
+    "necessity": [
+      "硬肉干",
+      "油灯"
+    ],
+    "luxary": [
+      "烈酒",
+      "睡袋"
+    ]
   },
   {
     "key": "技师",
     "capacity": 20,
     "image": "icon_resident_technician.png",
     "area": "arctic",
-    "display": "technician"
+    "display": "technician",
+    "necessity": [
+      "硬肉干",
+      "油灯",
+      "罐头",
+      "雪橇"
+    ],
+    "luxary": [
+      "烈酒",
+      "睡袋",
+      "熊皮大衣",
+      "咖啡"
+    ]
   },
   {
     "key": "牧羊人",
     "capacity": 10,
     "image": "icon_resident_sheperd.png",
     "area": "africa",
-    "display": "shepherd"
+    "display": "shepherd",
+    "necessity": [
+      "山羊奶",
+      "华丽衣服",
+      "腌肉"
+    ],
+    "luxary": [
+      "木槿茶"
+    ]
   },
   {
     "key": "长老",
     "capacity": 20,
     "image": "icon_resident_elder.png",
     "area": "africa",
-    "display": "elder"
+    "display": "elder",
+    "necessity": [
+      "山羊奶",
+      "华丽衣服",
+      "腌肉",
+      "陶罐",
+      "海鲜炖汤",
+      "经文",
+      "灯笼"
+    ],
+    "luxary": [
+      "木槿茶",
+      "挂毯",
+      "烟斗",
+      "眼镜"
+    ]
   }
 ]

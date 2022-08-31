@@ -1,5 +1,5 @@
-[
-  {
+{
+  "高级武器": {
     "key": "高级武器",
     "time": 120,
     "image": "icon_advanced_weaponry.png",
@@ -11,7 +11,7 @@
       "钢"
     ]
   },
-  {
+  "羊驼毛": {
     "key": "羊驼毛",
     "time": 30,
     "image": "icon_alpaca_wool.png",
@@ -20,7 +20,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "香蕉": {
     "key": "香蕉",
     "time": 30,
     "image": "icon_banana.png",
@@ -29,7 +29,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "钢梁": {
     "key": "钢梁",
     "time": 30,
     "image": "icon_beams.png",
@@ -40,7 +40,7 @@
       "钢"
     ]
   },
-  {
+  "熊毛皮": {
     "key": "熊毛皮",
     "time": 90,
     "image": "icon_bear_fur.png",
@@ -49,7 +49,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "啤酒": {
     "key": "啤酒",
     "time": 60,
     "image": "icon_beer.png",
@@ -61,7 +61,7 @@
       "啤酒花"
     ]
   },
-  {
+  "蜂蜡": {
     "key": "蜂蜡",
     "time": 30,
     "image": "icon_beeswax.png",
@@ -70,8 +70,8 @@
     "ect": false,
     "material": []
   },
-  {
-    "key": "台球",
+  "台球桌": {
+    "key": "台球桌",
     "time": 60,
     "image": "icon_billard.png",
     "name": "billard",
@@ -83,10 +83,10 @@
       "赛璐璐"
     ]
   },
-  {
+  "礼帽": {
     "key": "礼帽",
     "time": 30,
-    "image": "icon_billard.png",
+    "image": "icon_bowler_hat.png",
     "name": "bowler_hat",
     "base": 100,
     "ect": false,
@@ -95,7 +95,7 @@
       "毛毡"
     ]
   },
-  {
+  "黄铜": {
     "key": "黄铜",
     "time": 30,
     "image": "icon_brass.png",
@@ -107,7 +107,7 @@
       "锌"
     ]
   },
-  {
+  "面包": {
     "key": "面包",
     "time": 60,
     "image": "icon_bread.png",
@@ -118,7 +118,7 @@
       "面粉"
     ]
   },
-  {
+  "砖块": {
     "key": "砖块",
     "time": 60,
     "image": "icon_bricks.png",
@@ -129,7 +129,7 @@
       "粘土"
     ]
   },
-  {
+  "口香糖": {
     "key": "口香糖",
     "time": 30,
     "image": "icon_bubble_gum.png",
@@ -142,7 +142,7 @@
       "肉桂"
     ]
   },
-  {
+  "墨西哥卷饼": {
     "key": "墨西哥卷饼",
     "time": 30,
     "image": "icon_burrito.png",
@@ -154,7 +154,7 @@
       "玉米"
     ]
   },
-  {
+  "蜡烛": {
     "key": "蜡烛",
     "time": 30,
     "image": "icon_candles.png",
@@ -166,7 +166,7 @@
       "蜂蜡"
     ]
   },
-  {
+  "罐头": {
     "key": "罐头",
     "time": 90,
     "image": "icon_canned_food.png",
@@ -178,7 +178,7 @@
       "铁"
     ]
   },
-  {
+  "橡胶": {
     "key": "橡胶",
     "time": 60,
     "image": "icon_caoutchouc.png",
@@ -187,7 +187,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "灯丝": {
     "key": "灯丝",
     "time": 60,
     "image": "icon_carbon_filament.png",
@@ -198,7 +198,7 @@
       "煤"
     ]
   },
-  {
+  "赛璐璐": {
     "key": "赛璐璐",
     "time": 30,
     "image": "icon_celluloid.png",
@@ -211,7 +211,7 @@
       "乙醇"
     ]
   },
-  {
+  "樟脑": {
     "key": "樟脑",
     "time": 30,
     "image": "icon_cellulose.png",
@@ -220,7 +220,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "水泥": {
     "key": "水泥",
     "time": 30,
     "image": "icon_cement.png",
@@ -229,7 +229,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "陶罐": {
     "key": "陶罐",
     "time": 30,
     "image": "icon_ceramics.png",
@@ -241,7 +241,7 @@
       "靛青"
     ]
   },
-  {
+  "谷物": {
     "key": "谷物",
     "time": 60,
     "image": "icon_cereals.png",
@@ -250,7 +250,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "香槟": {
     "key": "香槟",
     "time": 30,
     "image": "icon_champagne.png",
@@ -262,7 +262,7 @@
       "葡萄"
     ]
   },
-  {
+  "底盘": {
     "key": "底盘",
     "time": 120,
     "image": "icon_chassis.png",
@@ -274,7 +274,7 @@
       "橡胶"
     ]
   },
-  {
+  "樱桃木": {
     "key": "樱桃木",
     "time": 30,
     "image": "icon_cherry_wood.png",
@@ -283,7 +283,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "巧克力": {
     "key": "巧克力",
     "time": 30,
     "image": "icon_chocolate.png",
@@ -295,7 +295,7 @@
       "可可"
     ]
   },
-  {
+  "雪茄": {
     "key": "雪茄",
     "time": 30,
     "image": "icon_cigars.png",
@@ -307,7 +307,7 @@
       "烟草"
     ]
   },
-  {
+  "肉桂": {
     "key": "肉桂",
     "time": 30,
     "image": "icon_cinamon.png",
@@ -316,7 +316,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "柑橘": {
     "key": "柑橘",
     "time": 30,
     "image": "icon_citrus.png",
@@ -325,7 +325,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "粘土": {
     "key": "粘土",
     "time": 30,
     "image": "icon_clay.png",
@@ -334,7 +334,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "煤": {
     "key": "煤",
     "time": 15,
     "image": "icon_coal_mine.png",
@@ -343,7 +343,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "煤炭": {
     "key": "煤炭",
     "time": 15,
     "image": "icon_coal.png",
@@ -352,7 +352,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "可可": {
     "key": "可可",
     "time": 60,
     "image": "icon_cocoa.png",
@@ -361,7 +361,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "咖啡": {
     "key": "咖啡",
     "time": 30,
     "image": "icon_coffe_cup.png",
@@ -372,7 +372,7 @@
       "咖啡豆"
     ]
   },
-  {
+  "咖啡豆": {
     "key": "咖啡豆",
     "time": 60,
     "image": "icon_coffee_beans.png",
@@ -381,7 +381,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "白兰地": {
     "key": "白兰地",
     "time": 60,
     "image": "icon_cognac.png",
@@ -394,7 +394,7 @@
       "白糖"
     ]
   },
-  {
+  "饼干": {
     "key": "饼干",
     "time": 15,
     "image": "icon_cookie.png",
@@ -407,7 +407,7 @@
       "柑橘"
     ]
   },
-  {
+  "铜": {
     "key": "铜",
     "time": 30,
     "image": "icon_copper.png",
@@ -416,7 +416,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "玉米": {
     "key": "玉米",
     "time": 60,
     "image": "icon_corn.png",
@@ -425,7 +425,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "玉米糊": {
     "key": "玉米糊",
     "time": 60,
     "image": "icon_atole.png",
@@ -437,7 +437,7 @@
       "甘蔗"
     ]
   },
-  {
+  "棉布": {
     "key": "棉布",
     "time": 30,
     "image": "icon_cotton_fur.png",
@@ -448,7 +448,7 @@
       "棉花"
     ]
   },
-  {
+  "棉花": {
     "key": "棉花",
     "time": 60,
     "image": "icon_cotton.png",
@@ -457,7 +457,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "炸药": {
     "key": "炸药",
     "time": 60,
     "image": "icon_dynamite.png",
@@ -469,7 +469,7 @@
       "硝"
     ]
   },
-  {
+  "电梯": {
     "key": "电梯",
     "time": 15,
     "image": "icon_elevator.png",
@@ -482,7 +482,7 @@
       "蒸汽机"
     ]
   },
-  {
+  "乙醇": {
     "key": "乙醇",
     "time": 30,
     "image": "icon_ethanol.png",
@@ -494,7 +494,7 @@
       "玉米"
     ]
   },
-  {
+  "毛毡": {
     "key": "毛毡",
     "time": 30,
     "image": "icon_felt.png",
@@ -505,7 +505,7 @@
       "羊驼毛"
     ]
   },
-  {
+  "鱼": {
     "key": "鱼",
     "time": 30,
     "image": "icon_fish.png",
@@ -514,7 +514,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "鱼油": {
     "key": "鱼油",
     "time": 30,
     "image": "icon_fishoil.png",
@@ -523,7 +523,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "面粉": {
     "key": "面粉",
     "time": 30,
     "image": "icon_flour.png",
@@ -534,7 +534,7 @@
       "谷物"
     ]
   },
-  {
+  "炸香蕉": {
     "key": "炸香蕉",
     "time": 30,
     "image": "icon_fried_bananas.png",
@@ -546,7 +546,7 @@
       "香蕉"
     ]
   },
-  {
+  "毛皮大衣": {
     "key": "毛皮大衣",
     "time": 30,
     "image": "icon_fur_coats.png",
@@ -558,7 +558,7 @@
       "毛皮"
     ]
   },
-  {
+  "熊皮大衣": {
     "key": "熊皮大衣",
     "time": 90,
     "image": "icon_fur_parka.png",
@@ -567,7 +567,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "毛皮": {
     "key": "毛皮",
     "time": 60,
     "image": "icon_fur.png",
@@ -576,7 +576,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "天然气": {
     "key": "天然气",
     "time": 210,
     "image": "icon_natural_gas.png",
@@ -585,7 +585,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "窗户": {
     "key": "窗户",
     "time": 60,
     "image": "icon_glass_window.png",
@@ -597,7 +597,7 @@
       "原木"
     ]
   },
-  {
+  "玻璃": {
     "key": "玻璃",
     "time": 30,
     "image": "icon_glass.png",
@@ -608,7 +608,7 @@
       "石英砂"
     ]
   },
-  {
+  "眼镜": {
     "key": "眼镜",
     "time": 90,
     "image": "icon_glasses.png",
@@ -620,7 +620,7 @@
       "黄铜"
     ]
   },
-  {
+  "山羊奶": {
     "key": "山羊奶",
     "time": 60,
     "image": "icon_goat_milk.png",
@@ -629,7 +629,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "金": {
     "key": "金",
     "time": 150,
     "image": "icon_gold_ore.png",
@@ -638,7 +638,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "金锭": {
     "key": "金锭",
     "time": 60,
     "image": "icon_gold.png",
@@ -650,7 +650,7 @@
       "煤"
     ]
   },
-  {
+  "鹅毛": {
     "key": "鹅毛",
     "time": 120,
     "image": "icon_goose_feathers.png",
@@ -659,7 +659,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "红椒炖肉": {
     "key": "红椒炖肉",
     "time": 120,
     "image": "icon_goulash.png",
@@ -671,7 +671,7 @@
       "红椒"
     ]
   },
-  {
+  "葡萄": {
     "key": "葡萄",
     "time": 120,
     "image": "icon_grapes.png",
@@ -680,7 +680,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "木槿": {
     "key": "木槿",
     "time": 60,
     "image": "icon_hibiscus_farm.png",
@@ -689,7 +689,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "木槿茶": {
     "key": "木槿茶",
     "time": 90,
     "image": "icon_hibiscus_tea.png",
@@ -700,7 +700,7 @@
       "木槿"
     ]
   },
-  {
+  "自行车": {
     "key": "自行车",
     "time": 15,
     "image": "icon_high_wheeler.png",
@@ -712,7 +712,7 @@
       "橡胶"
     ]
   },
-  {
+  "啤酒花": {
     "key": "啤酒花",
     "time": 90,
     "image": "icon_hops.png",
@@ -721,7 +721,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "靛青": {
     "key": "靛青",
     "time": 60,
     "image": "icon_indigo.png",
@@ -730,7 +730,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "薄木片": {
     "key": "薄木片",
     "time": 60,
     "image": "icon_inlay.png",
@@ -739,7 +739,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "铁": {
     "key": "铁",
     "time": 15,
     "image": "icon_iron.png",
@@ -748,7 +748,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "果酱": {
     "key": "果酱",
     "time": 30,
     "image": "icon_jam.png",
@@ -757,7 +757,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "珠宝": {
     "key": "珠宝",
     "time": 30,
     "image": "icon_jewelry.png",
@@ -769,7 +769,7 @@
       "珍珠"
     ]
   },
-  {
+  "漆": {
     "key": "漆",
     "time": 30,
     "image": "icon_lacquer.png",
@@ -782,7 +782,7 @@
       "乙醇"
     ]
   },
-  {
+  "灯笼": {
     "key": "灯笼",
     "time": 60,
     "image": "icon_lanterns.png",
@@ -794,8 +794,8 @@
       "玻璃"
     ]
   },
-  {
-    "key": "皮鞋",
+  "皮靴": {
+    "key": "皮靴",
     "time": 60,
     "image": "icon_leather_shoes.png",
     "name": "leather_shoes",
@@ -805,7 +805,7 @@
       "万扎牛"
     ]
   },
-  {
+  "椰子": {
     "key": "椰子",
     "time": 30,
     "image": "icon_coconut.png",
@@ -814,7 +814,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "柠檬汽水": {
     "key": "柠檬汽水",
     "time": 30,
     "image": "icon_lemonade.png",
@@ -827,7 +827,7 @@
       "硝"
     ]
   },
-  {
+  "灯泡": {
     "key": "灯泡",
     "time": 60,
     "image": "icon_light_bulb.png",
@@ -839,7 +839,7 @@
       "玻璃"
     ]
   },
-  {
+  "亚麻布": {
     "key": "亚麻布",
     "time": 30,
     "image": "icon_linen_fabric.png",
@@ -850,7 +850,7 @@
       "亚麻"
     ]
   },
-  {
+  "亚麻": {
     "key": "亚麻",
     "time": 60,
     "image": "icon_linen_farm.png",
@@ -859,7 +859,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "麦芽": {
     "key": "麦芽",
     "time": 30,
     "image": "icon_malt.png",
@@ -870,7 +870,7 @@
       "谷物"
     ]
   },
-  {
+  "牛肉": {
     "key": "牛肉",
     "time": 120,
     "image": "icon_meat_raw.png",
@@ -879,7 +879,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "香肠": {
     "key": "香肠",
     "time": 60,
     "image": "icon_meat_sausage.png",
@@ -890,7 +890,7 @@
       "猪"
     ]
   },
-  {
+  "泥砖": {
     "key": "泥砖",
     "time": 60,
     "image": "icon_mud_bricks.png",
@@ -902,7 +902,7 @@
       "teff_grass"
     ]
   },
-  {
+  "硝": {
     "key": "硝",
     "time": 120,
     "image": "icon_niter.png",
@@ -911,7 +911,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "油灯": {
     "key": "油灯",
     "time": 60,
     "image": "icon_oil_lamps.png",
@@ -923,7 +923,7 @@
       "黄铜"
     ]
   },
-  {
+  "纸": {
     "key": "纸",
     "time": 15,
     "image": "icon_paper.png",
@@ -934,7 +934,7 @@
       "原木"
     ]
   },
-  {
+  "珍珠": {
     "key": "珍珠",
     "time": 90,
     "image": "icon_pearls.png",
@@ -943,7 +943,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "硬肉干": {
     "key": "硬肉干",
     "time": 60,
     "image": "icon_pemmican.png",
@@ -955,7 +955,7 @@
       "驯鹿肉"
     ]
   },
-  {
+  "红椒": {
     "key": "红椒",
     "time": 120,
     "image": "icon_pepper.png",
@@ -964,7 +964,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "留声机": {
     "key": "留声机",
     "time": 60,
     "image": "icon_phonographs.png",
@@ -976,7 +976,7 @@
       "黄铜"
     ]
   },
-  {
+  "猪": {
     "key": "猪",
     "time": 60,
     "image": "icon_pigs.png",
@@ -985,7 +985,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "怀表": {
     "key": "怀表",
     "time": 45,
     "image": "icon_pocket_watch.png",
@@ -997,7 +997,7 @@
       "玻璃"
     ]
   },
-  {
+  "斗篷": {
     "key": "斗篷",
     "time": 30,
     "image": "icon_poncho.png",
@@ -1006,7 +1006,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "土豆": {
     "key": "土豆",
     "time": 30,
     "image": "icon_potatoes.png",
@@ -1015,7 +1015,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "石英砂": {
     "key": "石英砂",
     "time": 30,
     "image": "icon_quartz_sand.png",
@@ -1024,7 +1024,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "驯鹿肉": {
     "key": "驯鹿肉",
     "time": 60,
     "image": "icon_reindeer_meat.png",
@@ -1033,7 +1033,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "钢筋混凝土": {
     "key": "钢筋混凝土",
     "time": 60,
     "image": "icon_reinforced_concrete.png",
@@ -1045,7 +1045,7 @@
       "水泥"
     ]
   },
-  {
+  "朗姆酒": {
     "key": "朗姆酒",
     "time": 30,
     "image": "icon_rum.png",
@@ -1057,7 +1057,7 @@
       "原木"
     ]
   },
-  {
+  "帆": {
     "key": "帆",
     "time": 30,
     "image": "icon_sail.png",
@@ -1068,7 +1068,7 @@
       "羊毛"
     ]
   },
-  {
+  "盐": {
     "key": "盐",
     "time": 30,
     "image": "icon_salt.png",
@@ -1077,7 +1077,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "烈酒": {
     "key": "烈酒",
     "time": 30,
     "image": "icon_schnapps.png",
@@ -1088,7 +1088,7 @@
       "土豆"
     ]
   },
-  {
+  "经文": {
     "key": "经文",
     "time": 60,
     "image": "icon_scriptures.png",
@@ -1100,7 +1100,7 @@
       "靛青"
     ]
   },
-  {
+  "龙虾": {
     "key": "龙虾",
     "time": 60,
     "image": "icon_seafood.png",
@@ -1109,7 +1109,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "海豹皮": {
     "key": "海豹皮",
     "time": 30,
     "image": "icon_seal_skin.png",
@@ -1118,7 +1118,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "缝纫机": {
     "key": "缝纫机",
     "time": 30,
     "image": "icon_sewing_machine.png",
@@ -1130,7 +1130,7 @@
       "原木"
     ]
   },
-  {
+  "洗发水": {
     "key": "洗发水",
     "time": 30,
     "image": "icon_shampoo.png",
@@ -1143,7 +1143,7 @@
       "肥皂"
     ]
   },
-  {
+  "雪橇框架": {
     "key": "雪橇框架",
     "time": 60,
     "image": "icon_sled_frame.png",
@@ -1155,7 +1155,7 @@
       "原木"
     ]
   },
-  {
+  "雪橇": {
     "key": "雪橇",
     "time": 60,
     "image": "icon_sled.png",
@@ -1167,7 +1167,7 @@
       "哈士奇"
     ]
   },
-  {
+  "哈士奇": {
     "key": "哈士奇",
     "time": 120,
     "image": "icon_husky.png",
@@ -1176,7 +1176,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "睡袋": {
     "key": "睡袋",
     "time": 60,
     "image": "icon_sleeping_bags.png",
@@ -1188,7 +1188,7 @@
       "鹅毛"
     ]
   },
-  {
+  "肥皂": {
     "key": "肥皂",
     "time": 30,
     "image": "icon_soap.png",
@@ -1199,7 +1199,7 @@
       "油脂"
     ]
   },
-  {
+  "纪念品": {
     "key": "纪念品",
     "time": 30,
     "image": "icon_souvenir.png",
@@ -1212,7 +1212,7 @@
       "棉花"
     ]
   },
-  {
+  "香料": {
     "key": "香料",
     "time": 60,
     "image": "icon_spices.png",
@@ -1221,7 +1221,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "汽车": {
     "key": "汽车",
     "time": 30,
     "image": "icon_steam_carriage.png",
@@ -1233,7 +1233,7 @@
       "底盘"
     ]
   },
-  {
+  "蒸汽机": {
     "key": "蒸汽机",
     "time": 45,
     "image": "icon_steam_machine.png",
@@ -1245,7 +1245,7 @@
       "黄铜"
     ]
   },
-  {
+  "钢": {
     "key": "钢",
     "time": 30,
     "image": "icon_steel.png",
@@ -1257,7 +1257,7 @@
       "煤"
     ]
   },
-  {
+  "甘蔗": {
     "key": "甘蔗",
     "time": 30,
     "image": "icon_sugar_cane.png",
@@ -1266,7 +1266,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "糖": {
     "key": "糖",
     "time": 30,
     "image": "icon_suger.png",
@@ -1277,7 +1277,7 @@
       "甘蔗"
     ]
   },
-  {
+  "定制服装": {
     "key": "定制服装",
     "time": 60,
     "image": "icon_suits.png",
@@ -1289,7 +1289,7 @@
       "亚麻布"
     ]
   },
-  {
+  "辣椒酱": {
     "key": "辣椒酱",
     "time": 120,
     "image": "icon_tabasco_sauce.png",
@@ -1300,7 +1300,7 @@
       "香料"
     ]
   },
-  {
+  "油脂": {
     "key": "油脂",
     "time": 60,
     "image": "icon_tallow.png",
@@ -1311,7 +1311,7 @@
       "猪"
     ]
   },
-  {
+  "挂毯": {
     "key": "挂毯",
     "time": 30,
     "image": "icon_tapestries.png",
@@ -1323,7 +1323,7 @@
       "亚麻布"
     ]
   },
-  {
+  "teff_flour": {
     "key": "teff_flour",
     "time": 30,
     "image": "icon_teff_flour.png",
@@ -1335,7 +1335,7 @@
       "香料"
     ]
   },
-  {
+  "teff_grass": {
     "key": "teff_grass",
     "time": 60,
     "image": "icon_teff_grass.png",
@@ -1344,7 +1344,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "电话": {
     "key": "电话",
     "time": 45,
     "image": "icon_telephones.png",
@@ -1356,7 +1356,7 @@
       "薄木片"
     ]
   },
-  {
+  "锌": {
     "key": "锌",
     "time": 30,
     "image": "icon_zinc_ore.png",
@@ -1365,7 +1365,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "烟斗": {
     "key": "烟斗",
     "time": 90,
     "image": "icon_tobacco_pipes.png",
@@ -1377,7 +1377,7 @@
       "烟草"
     ]
   },
-  {
+  "烟草": {
     "key": "烟草",
     "time": 120,
     "image": "icon_tobacco.png",
@@ -1386,7 +1386,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "玩具": {
     "key": "玩具",
     "time": 60,
     "image": "icon_toys.png",
@@ -1399,7 +1399,7 @@
       "漆"
     ]
   },
-  {
+  "华丽衣服": {
     "key": "华丽衣服",
     "time": 60,
     "image": "icon_traditional_clothing.png",
@@ -1411,7 +1411,7 @@
       "亚麻布"
     ]
   },
-  {
+  "打字机": {
     "key": "打字机",
     "time": 14,
     "image": "icon_typewriter.png",
@@ -1424,7 +1424,7 @@
       "漆"
     ]
   },
-  {
+  "小提琴": {
     "key": "小提琴",
     "time": 60,
     "image": "icon_violin.png",
@@ -1437,7 +1437,7 @@
       "漆"
     ]
   },
-  {
+  "万扎木材": {
     "key": "万扎木材",
     "time": 15,
     "image": "icon_wansa_wood.png",
@@ -1446,7 +1446,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "海鲜炖汤": {
     "key": "海鲜炖汤",
     "time": 60,
     "image": "icon_wat_stew.png",
@@ -1458,7 +1458,19 @@
       "龙虾"
     ]
   },
-  {
+  "腌肉": {
+    "key": "腌肉",
+    "time": 30,
+    "image": "icon_dried_meat.png",
+    "name": "dired_meat",
+    "base": 100,
+    "ect": false,
+    "material": [
+      "万扎牛",
+      "盐"
+    ]
+  },
+  "万扎牛": {
     "key": "万扎牛",
     "time": 60,
     "image": "icon_watusi.png",
@@ -1467,7 +1479,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "武器": {
     "key": "武器",
     "time": 90,
     "image": "icon_weapons.png",
@@ -1478,7 +1490,7 @@
       "钢"
     ]
   },
-  {
+  "鲸油": {
     "key": "鲸油",
     "time": 60,
     "image": "icon_whale_oil.png",
@@ -1487,7 +1499,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "原木": {
     "key": "原木",
     "time": 15,
     "image": "icon_wood_log.png",
@@ -1496,7 +1508,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "树脂": {
     "key": "树脂",
     "time": 30,
     "image": "icon_wood_resin.png",
@@ -1505,7 +1517,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "木材": {
     "key": "木材",
     "time": 15,
     "image": "icon_wooden_planks.png",
@@ -1514,7 +1526,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "羊毛": {
     "key": "羊毛",
     "time": 30,
     "image": "icon_wool.png",
@@ -1523,7 +1535,7 @@
     "ect": false,
     "material": []
   },
-  {
+  "工作服": {
     "key": "工作服",
     "time": 30,
     "image": "icon_working_cloth.png",
@@ -1534,4 +1546,4 @@
       "羊毛"
     ]
   }
-]
+}
